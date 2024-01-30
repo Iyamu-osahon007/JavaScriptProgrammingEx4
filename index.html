@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript and HMTL</title>
+    <script src="app2.js"></script>
+    <script>
+        console.log(myName);
+        alert('Hello from the alert')
+
+        let a = prompt('Value 1:', 0);
+        let b = prompt('value 2:', 0);
+        let c = a + b;
+
+        alert(c);
+        console.log(c);
+
+        let d = parseInt(a);
+        let e = parseInt(b);
+        let f = d + e;
+        alert(f);
+        console.log(f);
+
+        let isTheinputNumeric = prompt('Enter an alpha character');
+
+        console.log(x);
+    </script>
+    <script src="app.js"></script>
 </head>
 <body>
     <h2>Javascrpt and Html</h2>
     <p>Hello World</p>
+    <script>
+        document.write(`<p>The input <strong>${isTheinputNumeric}</strong> si not numeric. true or false</p>`);
+        document.write(`<p>${isNaN(isTheInputNumeric)}</p>`);
+        document.write(`My current url is ${window.location}`);
+    </script>
     
 </body>
 </html>

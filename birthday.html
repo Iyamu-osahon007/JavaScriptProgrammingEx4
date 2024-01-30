@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let year = prompt('Provide your birth year:', new Date().getFullYear());
+        let month = prompt('Provide your birth month: ');
+        let date = prompt('Provide your birth date:');
+
+        let birthDate;
+        let age;
+
+
+        try {
+            if(isNaN(year + month + date)){
+                throw new Error('Some inputs are not vslid')
+            }
+            birthDate = new Date(year, month - 1, date);
+            console.log(birthDate);
+
+            age = new Date().getFullYear() - birthDate.getFullYear()
+        } catch (error) {
+            alert(error.message);
+            window.location = window.location;
+        }
+    </script>
+    <style>
+        body{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Age Calculator</h1>
+    <p>Provide Birthdate: <script>document.write(birthDate)</script></p>
+    <p>Age in the year 
+        <script>document.write(new Date().getFullYear())</script>:
+        <script>document.write(age)</script>.
+    </p>
+    
+</body>
+</html>
